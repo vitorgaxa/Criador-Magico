@@ -12,6 +12,13 @@ async function cliqueNoBotao() {
     let codigo = document.querySelector(".area-codigo")
     let areaResultado = document.querySelector(".area-resultado")
 
+    let botao = document.querySelector(".butao-magica")
+
+    botao.disabled = true
+    botao.textContent = "Criando..."
+    botao.style.background = "#888"
+
+
     // usando a função fetch para enviar dados
     let resposta = await fetch(Webhook , {
         method: 'POST', // Método usando para enviar os dados
@@ -29,6 +36,9 @@ async function cliqueNoBotao() {
     areaResultado.innerHTML = info.preview
 
     document.head.insertAdjacentHTML('beforeend', "<style>"+ info.style +"</style>")
-    
+
+    botao.disabled = false
+    botao.textContent = "Criar mágica ✨"
+    botao.style.background = "#37e359"
 
 }
