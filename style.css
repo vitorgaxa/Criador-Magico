@@ -94,3 +94,29 @@ button:hover {
 button:active {
     transform: scale(0.9);
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 3%;
+    }
+    
+    .sessao-maior {
+        height: 280px;
+    }
+
+    .sessao-menor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        padding: 18px 40px;
+        font-size: 20px;
+    }
+}
